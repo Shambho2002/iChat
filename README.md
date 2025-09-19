@@ -49,6 +49,6 @@ It enables instant messaging between multiple users with features like:
    ```bash
    node index.js
 
-Or(if you use nodemon):
+Or (if you use nodemon):
    ```bash
    nodemon index.js
