@@ -23,7 +23,6 @@ It enables instant messaging between multiple users with features like:
 ### User Join/Leave Notification
 ![User Join Screenshot](./screenshots/user-join.png)
 
-*(Place your screenshots in a folder named `screenshots` inside your project, and replace the file names accordingly.)*
 
 ---
 
@@ -42,3 +41,14 @@ It enables instant messaging between multiple users with features like:
    git clone https://github.com/your-username/ichat.git
    cd ichat
 
+2. Install dependencies
+   ```bash
+   npm install
+
+3. Start the server
+   ```bash
+   node index.js
+
+Or(if you use nodemon):
+   ```bash
+   nodemon index.js
