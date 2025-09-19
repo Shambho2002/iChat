@@ -1,0 +1,211 @@
+/* =============================
+   RESET & BASE STYLES
+============================= */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Segoe UI", Roboto, Arial, sans-serif;
+}
+
+body {
+  background: #e5ddd5;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  color: #333;
+}
+
+/* App name in navbar */
+.app-name {
+  font-size: 22px;
+  font-weight: 600;
+  color: #fff;
+  margin-right: 12px;
+  font-family: "Segoe UI", Roboto, Arial, sans-serif;
+  letter-spacing: 1px;
+}
+
+
+.marquee-text {
+  flex: 1;
+  color: #fff;
+  font-size: 18px;
+  font-weight: 500;
+  margin-right: 15px;
+  white-space: nowrap;
+}
+
+
+/* =============================
+   NAVBAR
+============================= */
+nav {
+  background: linear-gradient(135deg, #128c7e, #075e54);
+  padding: 14px 20px;
+  display: flex;
+  align-items: center;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.15);
+}
+
+.logo {
+  height: 45px;
+  width: 45px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid #fff;
+}
+
+/* =============================
+   CHAT CONTAINER
+============================= */
+.container {
+  flex: 1;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  overflow-y: auto;
+  background: url("https://i.imgur.com/9t6gGDN.png") repeat; /* WhatsApp-like bg */
+  background-size: cover;
+}
+
+/* Scrollbar styling */
+.container::-webkit-scrollbar {
+  width: 8px;
+}
+.container::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+}
+
+/* =============================
+   MESSAGE BUBBLES
+============================= */
+.message {
+  max-width: 70%;
+  padding: 12px 16px;
+  border-radius: 18px;
+  font-size: 15px;
+  line-height: 1.5;
+  word-wrap: break-word;
+  position: relative;
+  animation: fadeIn 0.25s ease-in;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.15);
+}
+
+/* Sent message (right) */
+.right {
+  align-self: flex-end;
+  background: #dcf8c6;
+  border-bottom-right-radius: 4px;
+}
+
+/* Received message (left) */
+.left {
+  align-self: flex-start;
+  background: #ffffff;
+  border-bottom-left-radius: 4px;
+}
+
+/* Small timestamp */
+.message::after {
+  content: attr(data-time);
+  font-size: 11px;
+  color: #777;
+  position: absolute;
+  bottom: -16px;
+  right: 10px;
+}
+
+/* =============================
+   INPUT SECTION
+============================= */
+.send {
+  padding: 12px;
+  background: #f0f0f0;
+  border-top: 1px solid #ddd;
+  display: flex;
+  justify-content: center;
+}
+
+#send-container {
+  display: flex;
+  width: 100%;
+  max-width: 850px;
+}
+
+#messageInp {
+  flex: 1;
+  padding: 12px 18px;
+  border: 1px solid #ccc;
+  border-radius: 25px;
+  outline: none;
+  font-size: 15px;
+  transition: all 0.3s ease;
+  background: #fff;
+}
+
+#messageInp:focus {
+  border-color: #128c7e;
+  box-shadow: 0 0 4px rgba(18, 140, 126, 0.4);
+}
+
+/* Send button */
+.btn {
+  margin-left: 12px;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 25px;
+  background: #128c7e;
+  color: #fff;
+  font-size: 15px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.1s;
+}
+
+.btn:hover {
+  background: #0d7a6e;
+}
+
+.btn:active {
+  transform: scale(0.95);
+}
+
+
+
+/* =============================
+   ANIMATIONS
+============================= */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(5px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* =============================
+   RESPONSIVE DESIGN
+============================= */
+@media (max-width: 600px) {
+  .container {
+    padding: 12px;
+  }
+  .message {
+    max-width: 85%;
+    font-size: 14px;
+  }
+  #messageInp {
+    font-size: 14px;
+  }
+  .btn {
+    font-size: 14px;
+    padding: 10px 16px;
+  }
+}
+

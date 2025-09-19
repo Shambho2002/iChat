@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>iChat — Realtime Node & Socket.io Chat App</title>
+  <meta name="description" content="A realtime chat app built with Node.js and Socket.io for instant, low-latency messaging.">
+  <!-- Open Graph (social) -->
+  <meta property="og:title" content="iChat — Realtime Node & Socket.io Chat App">
+  <meta property="og:description" content="A realtime chat app built with Node.js and Socket.io for instant messaging.">
+  <meta property="og:type" content="website">
+  <script defer src="http://localhost:8000/socket.io/socket.io.js"></script>
+  <script defer src="js/client.js"></script>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <nav>
+        <div class="app-name">iChat</div>
+        <img class="logo" src="chat.jpg" alt="iChat Logo">
+        <marquee class="marquee-text" behavior="scroll" direction="left" scrollamount="5">
+            Welcome to iChat — Stay connected with your friends, share your thoughts instantly, and enjoy smooth realtime messaging anytime, anywhere. Experience fast, secure, and modern chatting like never before!
+        </marquee>
+    </nav>
+
+
+
+    <div class="container">
+        <!-- <div class="message right">Harry: Hey how are you?</div>
+        <div class="message left">Rohan: Bhai I am fine. How about you</div> -->
+    </div>
+
+
+    <div class="send">
+        <form action="#" id="send-container">
+            <input type="text" name="messageInp" id="messageInp">
+            <button class="btn" type="submit">Send</button>
+        </form>
+    </div>
+</body>
+</html>
